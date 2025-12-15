@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>sudoku</title>
+    <meta name="generator" content="pydoctor 25.10.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          sudoku <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="index.html" class="internal-link" title="This module">sudoku</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="sudoku.SudokuError.html" class="internal-link" title="sudoku.SudokuError"><wbr></wbr>Sudoku<wbr></wbr>Error</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw_board" class="internal-link" title="sudoku.draw_board">draw<wbr></wbr>_board</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw_game_info" class="internal-link" title="sudoku.draw_game_info">draw<wbr></wbr>_game<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw_intro" class="internal-link" title="sudoku.draw_intro">draw<wbr></wbr>_intro</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw_numbers" class="internal-link" title="sudoku.draw_numbers">draw<wbr></wbr>_numbers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw_restart_offer" class="internal-link" title="sudoku.draw_restart_offer">draw<wbr></wbr>_restart<wbr></wbr>_offer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw_selected_cell" class="internal-link" title="sudoku.draw_selected_cell">draw<wbr></wbr>_selected<wbr></wbr>_cell</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#generate_board" class="internal-link" title="sudoku.generate_board">generate<wbr></wbr>_board</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_valid_move" class="internal-link" title="sudoku.is_valid_move">is<wbr></wbr>_valid<wbr></wbr>_move</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#main" class="internal-link" title="sudoku.main">main</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#solved_board" class="internal-link" title="sudoku.solved_board">solved<wbr></wbr>_board</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#BLACK" class="internal-link" title="sudoku.BLACK">BLACK</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#CELL_SIZE" class="internal-link" title="sudoku.CELL_SIZE">CELL<wbr></wbr>_SIZE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#GRAY" class="internal-link" title="sudoku.GRAY">GRAY</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#GREEN" class="internal-link" title="sudoku.GREEN">GREEN</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#HEIGHT" class="internal-link" title="sudoku.HEIGHT">HEIGHT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#RED" class="internal-link" title="sudoku.RED">RED</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#WHITE" class="internal-link" title="sudoku.WHITE">WHITE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#WIDTH" class="internal-link" title="sudoku.WIDTH">WIDTH</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#YELLOW" class="internal-link" title="sudoku.YELLOW">YELLOW</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clock" class="internal-link" title="sudoku.clock">clock</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#font" class="internal-link" title="sudoku.font">font</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#screen" class="internal-link" title="sudoku.screen">screen</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapse-sidebar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <main class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">sudoku</a></code></code></h1>
+          <div id="show-private">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="split-tables">
+          <table class="children sortable" id="id1">
+  
+  
+  <tr class="exception">
+    
+    <td>Exception</td>
+    <td><code><a href="sudoku.SudokuError.html" class="internal-link" title="sudoku.SudokuError"><wbr></wbr>Sudoku<wbr></wbr>Error</a></code></td>
+    <td>Базовый класс для логических ошибок игры Судоку</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#draw_board" class="internal-link" title="sudoku.draw_board">draw<wbr></wbr>_board</a></code></td>
+    <td>Рисует сетку поля (линии)</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#draw_game_info" class="internal-link" title="sudoku.draw_game_info">draw<wbr></wbr>_game<wbr></wbr>_info</a></code></td>
+    <td>Рисует нижнюю панель статистики</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#draw_intro" class="internal-link" title="sudoku.draw_intro">draw<wbr></wbr>_intro</a></code></td>
+    <td>Рисует стартовое меню</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#draw_numbers" class="internal-link" title="sudoku.draw_numbers">draw<wbr></wbr>_numbers</a></code></td>
+    <td>Отрисовывает числа на доске с учетом цветов и подсветки ошибок</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#draw_restart_offer" class="internal-link" title="sudoku.draw_restart_offer">draw<wbr></wbr>_restart<wbr></wbr>_offer</a></code></td>
+    <td>Рисует кнопку 'Restart'</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#draw_selected_cell" class="internal-link" title="sudoku.draw_selected_cell">draw<wbr></wbr>_selected<wbr></wbr>_cell</a></code></td>
+    <td>Рисует рамку вокруг выбранной клетки</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#generate_board" class="internal-link" title="sudoku.generate_board">generate<wbr></wbr>_board</a></code></td>
+    <td>Генерирует игровое поле и решение</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_valid_move" class="internal-link" title="sudoku.is_valid_move">is<wbr></wbr>_valid<wbr></wbr>_move</a></code></td>
+    <td>Проверяет валидность хода по правилам Судоку</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#main" class="internal-link" title="sudoku.main">main</a></code></td>
+    <td>Основная функция, содержащая игровой цикл</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#solved_board" class="internal-link" title="sudoku.solved_board">solved<wbr></wbr>_board</a></code></td>
+    <td>Рекурсивно решает доску. Использует случайный порядок чисел для генерации</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#BLACK" class="internal-link" title="sudoku.BLACK">BLACK</a></code></td>
+    <td>tuple: Черный цвет. Используется для линий сетки и текста меню</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#CELL_SIZE" class="internal-link" title="sudoku.CELL_SIZE">CELL<wbr></wbr>_SIZE</a></code></td>
+    <td>int: Размер одной клетки поля (ширина поля / 9)</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#GRAY" class="internal-link" title="sudoku.GRAY">GRAY</a></code></td>
+    <td>tuple: Серый цвет. Фоновая заливка игрового поля</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#GREEN" class="internal-link" title="sudoku.GREEN">GREEN</a></code></td>
+    <td>tuple: Зеленый цвет. Используется для правильных ответов и кнопок</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#HEIGHT" class="internal-link" title="sudoku.HEIGHT">HEIGHT</a></code></td>
+    <td>int: Высота окна приложения в пикселях (включая область статистики)</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#RED" class="internal-link" title="sudoku.RED">RED</a></code></td>
+    <td>tuple: Красный цвет. Используется для ошибок, выделения и кнопок</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#WHITE" class="internal-link" title="sudoku.WHITE">WHITE</a></code></td>
+    <td>tuple: Белый цвет. Используется для исходных (неизменяемых) цифр</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#WIDTH" class="internal-link" title="sudoku.WIDTH">WIDTH</a></code></td>
+    <td>int: Ширина окна приложения в пикселях</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#YELLOW" class="internal-link" title="sudoku.YELLOW">YELLOW</a></code></td>
+    <td>tuple: Желтый цвет. Используется для подсказок и таймера</td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#clock" class="internal-link" title="sudoku.clock">clock</a></code></td>
+    <td>pygame.time.Clock: Объект для контроля FPS (кадров в секунду)</td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#font" class="internal-link" title="sudoku.font">font</a></code></td>
+    <td>pygame.font.Font: Шрифт для отрисовки текста и цифр</td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#screen" class="internal-link" title="sudoku.screen">screen</a></code></td>
+    <td>pygame.Surface: Основная поверхность окна, на которой происходит отрисовка</td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="child-list">
+          <div class="basefunction">
+  
+  
+  <a name="sudoku.draw_board">
+    
+  </a>
+  <a name="draw_board">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">draw_board</span><span class="function-signature">(<span class="rst-sig-param">surface</span>):</span>
+    
+    <a class="headerLink" href="#draw_board" title="sudoku.draw_board">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует сетку поля (линии)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.draw_game_info">
+    
+  </a>
+  <a name="draw_game_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">draw_game_info</span><span class="function-signature">(<span class="rst-sig-param">surface, </span><span class="rst-sig-param">hints, </span><span class="rst-sig-param">time_ms, </span><span class="rst-sig-param">mistakes</span>):</span>
+    
+    <a class="headerLink" href="#draw_game_info" title="sudoku.draw_game_info">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует нижнюю панель статистики</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.draw_intro">
+    
+  </a>
+  <a name="draw_intro">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">draw_intro</span><span class="function-signature">(<span class="rst-sig-param">surface</span>):</span>
+    
+    <a class="headerLink" href="#draw_intro" title="sudoku.draw_intro">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует стартовое меню</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.draw_numbers">
+    
+  </a>
+  <a name="draw_numbers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">draw_numbers</span><span class="function-signature">(<span class="rst-sig-param">surface, </span><span class="rst-sig-param">game_board, </span><span class="rst-sig-param">original_grid, </span><span class="rst-sig-param">solution_grid, </span><span class="rst-sig-param">mistake_number=None</span>):</span>
+    
+    <a class="headerLink" href="#draw_numbers" title="sudoku.draw_numbers">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отрисовывает числа на доске с учетом цветов и подсветки ошибок</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.draw_restart_offer">
+    
+  </a>
+  <a name="draw_restart_offer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">draw_restart_offer</span><span class="function-signature">(<span class="rst-sig-param">surface</span>):</span>
+    
+    <a class="headerLink" href="#draw_restart_offer" title="sudoku.draw_restart_offer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует кнопку 'Restart'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.draw_selected_cell">
+    
+  </a>
+  <a name="draw_selected_cell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">draw_selected_cell</span><span class="function-signature">(<span class="rst-sig-param">surface, </span><span class="rst-sig-param">row, </span><span class="rst-sig-param">col</span>):</span>
+    
+    <a class="headerLink" href="#draw_selected_cell" title="sudoku.draw_selected_cell">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует рамку вокруг выбранной клетки</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.generate_board">
+    
+  </a>
+  <a name="generate_board">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">generate_board</span><span class="function-signature">(<span class="rst-sig-param">difficulty</span>):</span>
+    
+    <a class="headerLink" href="#generate_board" title="sudoku.generate_board">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Генерирует игровое поле и решение</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">difficulty</span></td><td class="fieldArgDesc">Сложность (1, 2 или 3)</td></tr></table><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">(game_board, solution_board, hints, mistakes)</td></tr></table><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code><a href="sudoku.SudokuError.html" class="internal-link" title="sudoku.SudokuError">SudokuError</a></code></td><td>Если сложность указана неверно</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.is_valid_move">
+    
+  </a>
+  <a name="is_valid_move">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">is_valid_move</span><span class="function-signature">(<span class="rst-sig-param">game_board, </span><span class="rst-sig-param">row, </span><span class="rst-sig-param">col, </span><span class="rst-sig-param">num</span>):</span>
+    
+    <a class="headerLink" href="#is_valid_move" title="sudoku.is_valid_move">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Проверяет валидность хода по правилам Судоку</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">game<wbr></wbr>_board</span></td><td class="fieldArgDesc">Текущее поле 9x9</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">row</span></td><td class="fieldArgDesc">Индекс строки</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">col</span></td><td class="fieldArgDesc">Индекс столбца</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">num</span></td><td class="fieldArgDesc">Число для проверки</td></tr></table><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">True, если ход возможен</td></tr></table><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если индексы вне диапазона</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">main</span><span class="function-signature">():</span>
+    
+    <a class="headerLink" href="#main" title="sudoku.main">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Основная функция, содержащая игровой цикл</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="sudoku.solved_board">
+    
+  </a>
+  <a name="solved_board">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span>&#160;<span class="py-defname">solved_board</span><span class="function-signature">(<span class="rst-sig-param">game_board</span>):</span>
+    
+    <a class="headerLink" href="#solved_board" title="sudoku.solved_board">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рекурсивно решает доску. Использует случайный порядок чисел для генерации</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">game<wbr></wbr>_board</span></td><td class="fieldArgDesc">Поле для решения</td></tr></table><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">Решенное поле или False</td></tr></table></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.BLACK">
+    
+  </a>
+  <a name="BLACK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">BLACK</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#BLACK" title="sudoku.BLACK">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>tuple: Черный цвет. Используется для линий сетки и текста меню</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>0, <wbr></wbr>0, <wbr></wbr>0)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.CELL_SIZE">
+    
+  </a>
+  <a name="CELL_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">CELL_SIZE</span> =
+    
+    <a class="headerLink" href="#CELL_SIZE" title="sudoku.CELL_SIZE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>int: Размер одной клетки поля (ширина поля / 9)</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>540 // 9</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.GRAY">
+    
+  </a>
+  <a name="GRAY">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">GRAY</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#GRAY" title="sudoku.GRAY">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>tuple: Серый цвет. Фоновая заливка игрового поля</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>128, <wbr></wbr>128, <wbr></wbr>128)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.GREEN">
+    
+  </a>
+  <a name="GREEN">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">GREEN</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#GREEN" title="sudoku.GREEN">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>tuple: Зеленый цвет. Используется для правильных ответов и кнопок</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>0, <wbr></wbr>255, <wbr></wbr>0)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.HEIGHT">
+    
+  </a>
+  <a name="HEIGHT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">HEIGHT</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#HEIGHT" title="sudoku.HEIGHT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>int: Высота окна приложения в пикселях (включая область статистики)</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>660</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.RED">
+    
+  </a>
+  <a name="RED">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">RED</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#RED" title="sudoku.RED">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>tuple: Красный цвет. Используется для ошибок, выделения и кнопок</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>255, <wbr></wbr>0, <wbr></wbr>0)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.WHITE">
+    
+  </a>
+  <a name="WHITE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">WHITE</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#WHITE" title="sudoku.WHITE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>tuple: Белый цвет. Используется для исходных (неизменяемых) цифр</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>255, <wbr></wbr>255, <wbr></wbr>255)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.WIDTH">
+    
+  </a>
+  <a name="WIDTH">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">WIDTH</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#WIDTH" title="sudoku.WIDTH">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>int: Ширина окна приложения в пикселях</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>540</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="sudoku.YELLOW">
+    
+  </a>
+  <a name="YELLOW">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">YELLOW</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#YELLOW" title="sudoku.YELLOW">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>tuple: Желтый цвет. Используется для подсказок и таймера</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>255, <wbr></wbr>255, <wbr></wbr>0)</code></pre></td></tr></table>
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="sudoku.clock">
+    
+  </a>
+  <a name="clock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">clock</span> =
+    
+    <a class="headerLink" href="#clock" title="sudoku.clock">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>pygame.time.Clock: Объект для контроля FPS (кадров в секунду)</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="sudoku.font">
+    
+  </a>
+  <a name="font">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">font</span> =
+    
+    <a class="headerLink" href="#font" title="sudoku.font">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>pygame.font.Font: Шрифт для отрисовки текста и цифр</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="sudoku.screen">
+    
+  </a>
+  <a name="screen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">screen</span> =
+    
+    <a class="headerLink" href="#screen" title="sudoku.screen">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>pygame.Surface: Основная поверхность окна, на которой происходит отрисовка</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </main>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for sudoku,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    25.10.1 at 2025-12-10 18:43:58.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
