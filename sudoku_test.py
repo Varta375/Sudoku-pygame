@@ -5,7 +5,7 @@ import pygame
 import os
 
 def test_is_valid_move_success():
-    """Тест №1: Проверка валидного хода (без фикстур)."""
+    """Тест №1: Проверка валидного хода."""
     board = [[0] * 9 for _ in range(9)]
     board[0][0] = 5
 
