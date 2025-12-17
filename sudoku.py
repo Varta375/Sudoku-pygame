@@ -1,8 +1,6 @@
 import copy
 import random
 import pygame
-import argparse
-from pathlib import Path
 
 class SudokuError(Exception):
     """Базовый класс для логических ошибок игры Судоку"""
