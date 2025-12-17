@@ -215,7 +215,7 @@ def draw_intro(surface):
     except (AttributeError, TypeError):
         raise AttributeError("Ошибка отрисовки кнопки рестарта: неверная поверхность или шрифт")
 
-def main(save_path):
+def main():
     """Основная функция, содержащая игровой цикл"""
 
     game_state = "start"
@@ -298,21 +298,6 @@ def main(save_path):
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    try:
-                        with open(save_path, "w", encoding="utf-8") as f:
-                            f.write(f"=== SUDOKU REPORT ===\n")
-                            f.write(f"Status: {game_state}\n")
-                            f.write(f"Time spent: {game_time // 1000} sec\n")
-                            f.write(f"Mistakes: {mistakes_left}\n")
-                            f.write(f"Hints: {hints_count}\n")
-
-                        print(f"Отчет сохранен в файл: {save_path.resolve()}")
-
-                    except IsADirectoryError:
-                        print(f"ОШИБКА: '{save_path}' — это папка. Укажите путь к файлу (например, result.txt)")
-                    except Exception as e:
-                        print(f"Ошибка записи файла: {e}")
-
                     done = True
 
                 if game_state == "start":
@@ -363,11 +348,12 @@ def main(save_path):
                                             mistake_number_reasoner = digit
                                         else:
                                             grid[selected_row][selected_col] = digit
-                                            mistake_number_reasoner = None
 
                             elif event.key == pygame.K_BACKSPACE or event.key == pygame.K_DELETE:
                                 if original_grid[selected_row][selected_col] == 0:
                                     grid[selected_row][selected_col] = 0
+                                    mistake_number_reasoner = None
+
 
                             elif event.key == pygame.K_RETURN:
                                 grid = copy.deepcopy(solution_grid)
@@ -425,23 +411,6 @@ def main(save_path):
         pygame.quit()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Sudoku Game")
-    parser.add_argument(
-        "--save-path",
-        type=str,
-        default="saves/game_report.txt",
-        help="Путь для сохранения отчета об игре"
-    )
-    args = parser.parse_args()
-    save_path = Path(args.save_path)
-
-    try:
-        full_dir = save_path.resolve().parent
-        full_dir.mkdir(parents=True, exist_ok=True)
-    except OSError as error:
-        print(f"Невозможно создать папку: {error}")
-        exit(1)
-
     pygame.init()
     try:
         screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -452,4 +421,4 @@ if __name__ == "__main__":
         exit(1)
 
     clock = pygame.time.Clock()
-    main(save_path)
+    main()
