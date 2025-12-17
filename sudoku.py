@@ -3,6 +3,7 @@ import random
 import pygame
 import argparse
 from pathlib import Path
+
 class SudokuError(Exception):
     """Базовый класс для логических ошибок игры Судоку"""
     pass
@@ -179,12 +180,12 @@ def draw_game_info(surface, hints, time_ms, mistakes):
     """Рисует нижнюю панель статистики"""
     minutes = (time_ms // 1000) // 60
     seconds = (time_ms // 1000) % 60
-    text_hints = font.render(f"Hints: {hints}", True, YELLOW)
+    text_hints = font.render(f"Hints left: {hints}", True, YELLOW)
     time_info = font.render(f"Time: {minutes:02}:{seconds:02}", True, YELLOW)
     game_mistakes_info = font.render(f"Mistakes left: {mistakes}", True, RED)
     surface.blit(text_hints, (10, 540))
-    surface.blit(time_info, (350, 540))
-    surface.blit(game_mistakes_info, (100, 590))
+    surface.blit(time_info, (340, 540))
+    surface.blit(game_mistakes_info, (130, 590))
 
 def draw_restart_offer(surface):
     """Рисует кнопку 'Restart'"""
@@ -297,31 +298,46 @@ def main(save_path):
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
+                    try:
+                        with open(save_path, "w", encoding="utf-8") as f:
+                            f.write(f"=== SUDOKU REPORT ===\n")
+                            f.write(f"Status: {game_state}\n")
+                            f.write(f"Time spent: {game_time // 1000} sec\n")
+                            f.write(f"Mistakes: {mistakes_left}\n")
+                            f.write(f"Hints: {hints_count}\n")
+
+                        print(f"Отчет сохранен в файл: {save_path.resolve()}")
+
+                    except IsADirectoryError:
+                        print(f"ОШИБКА: '{save_path}' — это папка. Укажите путь к файлу (например, result.txt)")
+                    except Exception as e:
+                        print(f"Ошибка записи файла: {e}")
+
                     done = True
 
                 if game_state == "start":
-                    if event.type == pygame.MOUSEBUTTONDOWN:
-                        pos = pygame.mouse.get_pos()
-                        try:
-                            difficulty = 0
-                            if 0 <= pos[0] <= 180:
-                                difficulty = 1
-                            elif 180 <= pos[0] <= 360:
-                                difficulty = 2
-                            else:
-                                difficulty = 3
+                        if event.type == pygame.MOUSEBUTTONDOWN:
+                            pos = pygame.mouse.get_pos()
+                            try:
+                                difficulty = 0
+                                if 0 <= pos[0] <= 180:
+                                    difficulty = 1
+                                elif 180 <= pos[0] <= 360:
+                                    difficulty = 2
+                                else:
+                                    difficulty = 3
 
-                            game_data = generate_board(difficulty)
-                            grid = game_data[0]
-                            solution_grid = game_data[1]
-                            hints_count = game_data[2]
-                            mistakes_left = game_data[3]
-                            original_grid = copy.deepcopy(grid)
+                                game_data = generate_board(difficulty)
+                                grid = game_data[0]
+                                solution_grid = game_data[1]
+                                hints_count = game_data[2]
+                                mistakes_left = game_data[3]
+                                original_grid = copy.deepcopy(grid)
 
-                            start_game_time = pygame.time.get_ticks()
-                            game_state = "playing"
-                        except SudokuError as error:
-                            print(f"Ошибка при создании уровня: {error}")
+                                start_game_time = pygame.time.get_ticks()
+                                game_state = "playing"
+                            except SudokuError as error:
+                                print(f"Ошибка при создании уровня: {error}")
 
                 elif game_state == "playing":
                     if event.type == pygame.MOUSEBUTTONDOWN:
@@ -413,11 +429,18 @@ if __name__ == "__main__":
     parser.add_argument(
         "--save-path",
         type=str,
-        default="saves/game_save.json",
-        help="Путь к файлу сохранения"
+        default="saves/game_report.txt",
+        help="Путь для сохранения отчета об игре"
     )
     args = parser.parse_args()
     save_path = Path(args.save_path)
+
+    try:
+        full_dir = save_path.resolve().parent
+        full_dir.mkdir(parents=True, exist_ok=True)
+    except OSError as error:
+        print(f"Невозможно создать папку: {error}")
+        exit(1)
 
     pygame.init()
     try:
@@ -425,7 +448,7 @@ if __name__ == "__main__":
         pygame.display.set_caption("Sudoku")
         font = pygame.font.SysFont("Times New Roman", 40)
     except pygame.error as error:
-        print(f"Ошибка инициализации графики: {error}")
+        print(f"Ошибка графики: {error}")
         exit(1)
 
     clock = pygame.time.Clock()
